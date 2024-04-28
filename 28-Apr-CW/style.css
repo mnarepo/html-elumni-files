@@ -1,0 +1,26 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.box{
+    background-color: aquamarine;
+    border-radius: 5px;
+    margin: 2px;
+    padding: 10px;
+    flex: 0 1 100px;
+}
+.flex-container{
+    display: flex;
+    justify-content: space-around;
+    height: 200px;
+    background-color: red;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.box3{
+    background-color: blanchedalmond;
+    align-self: center;
+    flex: 3 1 auto;
+}

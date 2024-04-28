@@ -1,0 +1,38 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.parent{
+    height: 550px;
+    width: 1250px;
+    background-color: cyan;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+}
+.child1{
+    background-color: red;
+    height: 100px;
+    width: 1250px;
+}
+.child2{
+    /* background-color: yellow; */
+    height: 450px;
+    width: 1250px;
+    gap: 10px;
+    display: flex;
+    gap: 10px;
+}
+.child2_1{
+    background-color: blue;
+    height: 450px;
+    width: 25vw;
+    gap: 10px;
+}
+.child2_2{
+    background-color: green;
+    height: 450px;
+    width: 75vw;
+    gap: 10px;
+}
