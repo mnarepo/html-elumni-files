@@ -10,7 +10,10 @@ body{
     border-bottom: 8px solid rgba(173, 216, 230, 0.386);
     border-top: 8px solid rgba(173, 216, 230, 0.386);
     display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
     text-align: center;
+    /* align-content: center; */
     flex-direction: column;
     gap: 5px;
 }
