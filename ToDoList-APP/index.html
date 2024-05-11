@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO Do List</title>
+    <script src="./main.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Todo List</h1>
+        <input type="text" id="taskInput" placeholder="Add new task">
+        <button id="addTaskBtn">Add Task</button>
+        <ul id="taskList"></ul>
+    </div>
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const taskInput = document.getElementById("taskInput");
+            const addTaskBtn = document.getElementById("addTaskBtn");
+            const taskList = document.getElementById("taskList");
+
+            addTaskBtn.addEventListener("click", function () {
+                const taskText = taskInput.value.trim();
+                if (taskText !== "") {
+                    const li = document.createElement("li");
+                    const date = new Date();
+                    const dateString = formatDate(date);
+                    li.textContent = `${taskText} (Added on ${dateString})`;
+                    taskList.appendChild(li);
+                    taskInput.value = "";
+                    addDeleteButton(li);
+                } else {
+                    alert("Please enter a task.");
+                }
+            });
+
+            taskList.addEventListener("click", function (e) {
+                if (e.target.tagName === "LI") {
+                    e.target.classList.toggle("completed");
+                } else if (e.target.classList.contains("delete-btn")) {
+                    e.target.parentNode.remove();
+                }
+            });
+
+            function addDeleteButton(li) {
+                const deleteButton = document.createElement("button");
+                deleteButton.textContent = "❌";
+                deleteButton.classList.add("delete-btn");
+                li.appendChild(deleteButton);
+            }
+
+            function formatDate(date) {
+                const options = { year: "numeric", month: "short", day: "numeric" };
+                return date.toLocaleDateString("en-US", options);
+            }
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>
