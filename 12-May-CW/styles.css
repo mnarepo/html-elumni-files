@@ -1,0 +1,48 @@
+.main-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: red;
+    height: 50vh;
+    width: 50vw;
+    gap: 5px;
+}
+
+.box1 {
+    width: 15vw;
+    background-color: green;
+    height: 15vh;
+}
+
+.box2 {
+    width: 15vw;
+    background-color: blue;
+    height: 15vh;
+}
+
+.box3 {
+    width: 15vw;
+    background-color: yellow;
+    height: 15vh;
+}
+
+@media screen and (max-width: 800px) {
+    .main-c {
+        background-color: orange;
+        flex-direction: column;
+    }
+    .box1{
+        font-size: 20px;
+    }
+    .box2{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .main-c {
+        background-color: blue;
+        /* flex-direction: column; */
+    }
+}
