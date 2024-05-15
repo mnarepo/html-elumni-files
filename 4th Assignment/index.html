@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate the Media</title>
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        video {
+            width: 100%;
+        }
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 80%;
+            height: 10px;
+            margin: 20px auto;
+            background: #d3d3d3;
+            outline: none;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #4CAF50;
+            cursor: pointer;
+        }
+        input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            background: #4CAF50;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Rate the Media</h1>
+
+    <video controls>
+        <source src="./Should you use HTML, CSS, JavaScript or Frameworks for your next Website..mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <form action="/submit-rating" method="post">
+        <label for="rating">Rate the video:</label><br>
+        <input type="range" id="rating" name="rating" min="1" max="5" value="3" step="1">
+        <br>
+        <output for="rating">3</output><br>
+        <input type="submit" value="Submit Rating">
+    </form>
+</div>
+
+</body>
+</html>
